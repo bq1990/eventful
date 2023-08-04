@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .titleBox {
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            align-items: center;
+            padding-top: 80px;
+            z-index: 9;
+            position: relative;
+        }
+
+        .boxes {
+            width: 900px;
+            margin: auto;
+        }
+
+        .imgResize {
+            height: 250px;
+            width: 900px;
+            opacity: .6;
+            z-index: 0;
+            position: absolute;
+        }
+
+        .img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .border {
+            border: 2px solid black;
+        }
+
+        .border1 {
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .textsize {
+            font-size: 30px;
+        }
+
+        .alignment {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .alignment2 {
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; display: flex; flex-direction: column;">
+    <div style="width: 900px; height: 150px; margin: auto; object-fit: fill;" class="imgfit">
+        <div>
+            <img class="imgResize" src="dallas.jpg" alt="">
+        </div>
+        <div class="titleBox">
+            <div style="width: 25%; text-align: center; background-color: blue; height: 30px;">Quarter 1 | 2023</div>
+            <div class="border textsize"
+                style="width: 50%; text-align: center; height: 50px; background: rgba(0, 0, 0, .5);">
+                <P style="margin: 0; padding-top:10px ;">
+                    <b style="color: rgb(255, 255, 255);">
+                        Janurary
+                    </b>
+                </P>
+            </div>
+            <div style="width: 25%; text-align: center; height: 30px; background-color: blue;">Volume 1 | Issue 1</div>
+        </div>
+    </div>
+
+    <div style="height: 110px;"></div>
+
+    <div class="boxes alignment">
+        <div style="padding-right: 10px; background-color: rgb(226, 226, 226); ">
+            <h2 style="padding-left: 10px;">Main topic one</h2>
+            <article>
+                <p style="padding-left: 5px;">
+                  {{ obj.main_topic }}
+                </p>
+            </article>
+        </div>
+
+        <div style="width: 30px;"></div>
+
+        <div style="background-color: rgb(226, 226, 226);">
+            pic box or other items if needed
+            <img class="img" src="{{ obj.image1.url }}" alt="">
+        </div>
+    </div>
+
+    <div style="height: 10px;"></div>
+
+    <div class="boxes alignment">
+        <div>
+            <img style="width: 248px;" src="pic2.jpg" alt="">
+        </div>
+
+        <div style="width: 10px;"></div>
+
+        <div style="background-color: rgb(226, 226, 226); width: 75%;">
+            <h2 style="padding-left: 5px;">Local Events</h2>
+            <article>
+                <ul style="list-style: none; line-height: 35px;">
+                    <li style="border-bottom: 2px solid silver;"><b>01</b> Event One</li>
+                    <li style="border-bottom: 2px solid silver;"><b>07</b> Event Two</li>
+                    <li style="border-bottom: 2px solid silver;"><b>13</b> Event Three</li>
+                    <li style="border-bottom: 2px solid silver;"><b>25</b> Event Four</li>
+                    <li style="border-bottom: 2px solid silver;"><b>30</b> Event Five</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+
+    <div style="height: 10px;"></div>
+
+    <div class="boxes alignment">
+        <div style="background-color: rgb(226, 226, 226);">
+            <img style="width: 250px; height: 450px;" src="pic4.jpg" alt="">
+        </div>
+
+        <div style="width: 30px;"></div>
+
+        <div style="background-color: rgb(226, 226, 226);">
+            <h2 style="padding: 0px; padding-left: 10px;">Market Topic</h2>
+            <article style="padding: 10px;">
+                <p>
+                <h3 style="margin: 0;">topic 1</h3>
+                {{ obj.topic1 }}
+                </p>
+                <p>
+                <h3 style="margin: 0;">topic 2</h3>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum." <a href="https://www.tatteredcover.com/">click here</a>
+                </p>
+                <p>
+                <h3 style="margin: 0;">topic 3</h3>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum." <a href="https://www.cariboucoffee.com/">click here</a>
+                </p>
+            </article>
+        </div>
+    </div>
+
+    <div style="height: 10px;"></div>
+
+    <div class="boxes alignment alignment2"
+        style="background-color: rgb(226, 226, 226); height: 110px; justify-content: space-evenly; display: flex; flex-direction: row;padding-top: 5px;">
+        <div>
+            <img src="legacy2.png" alt="">
+        </div>
+        <div style="padding-top: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Legacy
+            Southwest Property Mangement</div>
+        <div style="display: flex; flex-direction: column;">
+            <div>Dale Smith</div>
+            <div>Community Manager</div>
+            <div>dale@legacysouthwestpm.com</div>
+            <div>Office: (214) 705-1615</div>
+        </div>
+    </div>
+</body>
+
+</html>
